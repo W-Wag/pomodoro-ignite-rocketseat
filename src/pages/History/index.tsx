@@ -2,12 +2,16 @@ import { ThemeProvider } from 'styled-components'
 import { GlobalStyle } from '../../styles/global'
 import { defaultTheme } from '../../styles/themes/default'
 import { HistoryContainer, HistoryList, Status } from './styles'
+import { useContext } from 'react'
+import { CyclesContext } from '../../contexts/CyclesContext'
 
 export function History() {
+  const { cycles } = useContext(CyclesContext)
   return (
     <ThemeProvider theme={defaultTheme}>
       <HistoryContainer>
         <h1>Meu Histórico</h1>
+        <pre>{JSON.stringify(cycles, null, 2)}</pre>
 
         <HistoryList>
           <table>
