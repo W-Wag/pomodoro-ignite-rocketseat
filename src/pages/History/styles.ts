@@ -24,7 +24,7 @@ export const HistoryList = styled.div`
     min-width: 600px;
 
     th {
-      background-color: ${(props) => props.theme['gray-400']};
+      background-color: ${(props) => props.theme['gray-600']};
       color: ${(props) => props.theme['gray-100']};
       padding: 1rem;
       text-align: left;
